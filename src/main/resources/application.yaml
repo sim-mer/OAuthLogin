@@ -1,0 +1,9 @@
+jwt:
+  secret-key: hoit
+
+oauth:
+  kakao:
+    client-id: 78697befb3627ad2d0f6a7ae29522333
+    url:
+      auth: https://kauth.kakao.com
+      api: https://kapi.kakao.com
