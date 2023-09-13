@@ -24,7 +24,7 @@ public class LoginService {
     Jwt jwt;
 
     public Token kakao(OAuthLoginParams params) {
-        OAuthInfo oAuthInfo = oAuthService.request(params);
+        OAuthInfo oAuthInfo = oAuthService.request(params); //유저 정보
         Long memberId = findOrCreateMember(oAuthInfo);
         Token token = new Token();
         token.setAccessToken(jwt.getAccessToken(memberId.toString(), null));

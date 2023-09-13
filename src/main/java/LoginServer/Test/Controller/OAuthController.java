@@ -15,10 +15,10 @@ public class OAuthController {
     LoginService loginService;
 
     @GetMapping("/kakao")
-    public void kakao(@RequestParam String code) {
+    public String kakao(@RequestParam String code) {
         KakaoLoginParams params = new KakaoLoginParams();
         params.setAuthorizationCode(code);
         Token token = loginService.kakao(params);
-        System.out.println(token.toString());
+        return token.toString();
     }
 }

@@ -22,6 +22,7 @@ public class KakaoInfo implements OAuthInfo {
     @JsonIgnoreProperties(ignoreUnknown = true)
     static class KakaoProfile {
         private String nickname;
+        private String thumbnail_image_url;
     }
 
     @Override
